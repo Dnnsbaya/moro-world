@@ -107,10 +107,12 @@ function openQuickView(index) {
   document.getElementById("quickQty").value = 1;
 
   document.getElementById("quickView").classList.add("active");
+  document.body.classList.add("modal-open"); // Lock page scroll
 }
 
 function closeQuickView() {
   document.getElementById("quickView").classList.remove("active");
+  document.body.classList.remove("modal-open"); // Unlock page scroll
 }
 
 function addQuickToCart() {
@@ -178,6 +180,7 @@ function removeFromCart(index) {
 function toggleCart() {
   document.getElementById("cartDrawer").classList.toggle("active");
   document.getElementById("overlay").classList.toggle("active");
+  document.body.classList.toggle("modal-open");
 }
 
 function openCart() {
@@ -243,12 +246,14 @@ function removeWishlist(index) {
 function toggleWishlist() {
   document.getElementById("wishlistDrawer").classList.toggle("active");
   document.getElementById("overlay").classList.toggle("active");
+  document.body.classList.toggle("modal-open");
 }
 
 function closeDrawers() {
   document.getElementById("cartDrawer").classList.remove("active");
   document.getElementById("wishlistDrawer").classList.remove("active");
   document.getElementById("overlay").classList.remove("active");
+  document.body.classList.remove("modal-open"); // Unlock
 }
 
 /* =======================
